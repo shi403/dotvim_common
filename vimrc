@@ -2,7 +2,7 @@
 if !1 | finish | endif
 
 if has('vim_starting') && v:version < 800
-	echo 'CAUTION!!! Please use vim80 or over.'
+	echo 'CAUTION!!! Please use vim version 8.0 or over.'
 	finish
 endif
 
@@ -20,6 +20,8 @@ endif
 "set encoding=utf-8
 set fileencodings=ucs-bom,iso-2022-jp,cp932,sjis,euc-jp,utf-8
 set fileformats=unix,dos,mac
+
+set ambiwidth=double
 
 "--" Encoding: 文字コードの自動認識: }}}1
 
