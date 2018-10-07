@@ -11,7 +11,8 @@ endif
 if has('vim_starting')
 	set runtimepath+=~/.vim_common
 	set runtimepath+=~/.vim_common/kaoriya
-	set runtimepath+=~/.vim
+
+	runtime macros/matchit.vim
 endif 
 "--" Vim Starting: }}}1
 
@@ -123,19 +124,19 @@ let g:ctrlp_open_func = {'files': 'CtrIP_OpenAtCenter'}
 
 "--" Taglist: }}}1
 
-"--" X Mouse Event: {{{1
+"--" Mouse Event: {{{1
 "--------------------------------------------------------------------------
 set mouse=a
 
-" }}}1 X Mouse Event:
+"--" Mouse Event: }}}1
 
-"--" C Common Plugin Options: {{{1
+"--" Common Plugin Options: {{{1
 "------------------------------------------------------------------------
 let g:Align_xstrlen = 3
 
-"--" C Common Plugin Options: }}}1
+"--" Common Plugin Options: }}}1
 
-"--" W Search Options: {{{1
+"--" Search Options: {{{1
 "--------------------------------------------------------------------------
 set   hlsearch
 set noincsearch     " do incremental searching
@@ -143,7 +144,7 @@ set   ignorecase    " 検索時に大文字小文字を無視
 set   smartcase     " 大文字小文字の両方が含まれている場合は大文字小文字を>
 set   wrapscan
 
-" }}}1 W Search Options:
+"--" Search Options: }}}1
 
 "--" Complete: {{{1
 "--------------------------------------------------------------------------
@@ -168,7 +169,7 @@ command! -count -nargs=1 ContinuousNumber
 
 " Utilityes: }}}1
 
-"--" Z Disable Default Plugins:  {{{1
+"--" Disable Default Plugins:  {{{1
 "--------------------------------------------------------------------------- 
 let g:loaded_2html_plugin      = 1 
 "let g:loaded_logiPat           = 1 
@@ -187,7 +188,12 @@ let g:loaded_man               = 1
 let g:loaded_tutor_mode_plugin = 1 
 let g:loaded_vimballPlugin     = 1 
 "let g:loaded_zipPlugin         = 1 
-"--" Z Disable Default Plugins: }}}1
+
+
+"-- .vim_common
+let loaded_taglist = 1
+
+"--" Disable Default Plugins: }}}1
 
 
 "--------------------------------------------------------------------------
